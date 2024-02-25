@@ -12,8 +12,8 @@
     <div class="input-box">
         <h4 class="deadline-date">納期</h4>
         <input type="text" class="deadline"></input>
-        <h4 class="project-title">案件名</h4>
-        <input type="text" class="project-name"></input>
+        <!-- <h4 class="project-title">案件名</h4>
+        <input type="text" class="project-name"></input> -->
         <button id="dl-input" type="button">ボタン</button>
     </div>
         <ol class="priority-box"></ol>
@@ -26,7 +26,8 @@
         const priorityBox = document.querySelector( ".priority-box" );
         const emptyArry = new Array();
 
-        const prjName = document.querySelector( ".project-name" );
+
+        // const prjName = document.querySelector( ".project-name" );
 
         dlInput.onclick = function() {
             const neoListDay = document.createElement( "span" );
@@ -41,17 +42,21 @@
 
             function ascending( a, b ) {
                 return a - b;
+            
             }
             emptyArry.sort(ascending);
 
-            const ranking = document.createElement( "li" );
+            
+            
+            let ranking = document.createElement( "li" );
+            ranking.innerHTML = emptyArry;
+            console.log( ranking );
+           
+            // priorityBox.prepend( emptyArry );
+            
 
-            emptyArry.forEach( function ( arry ) {
-                console.log( arry );
-            });
 
-            ranking.innerHTML = emptyArry[0];
-            priorityBox.prepend( ranking );
+            
             
         }
         
