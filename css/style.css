@@ -1,0 +1,13 @@
+@media screen and (min-width: 600px) {
+    .input-box {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.input-box {
+    padding: 3em 0;
+}
+.input-box h4 {
+    padding: 0 1em;
+}
